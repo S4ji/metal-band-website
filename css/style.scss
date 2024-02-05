@@ -1,0 +1,172 @@
+// INCLUDE
+
+@use './assets/variables' as *;
+@use './assets/header' as *;
+@use './assets/index' as *;
+@use './assets/products' as *;
+@use './assets/form' as *;
+@use './assets/slider' as *;
+@use './assets/apropos' as *;
+@use './assets/footer' as *;
+
+* {
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+body {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    //Cacher la scrollbar
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+//cacher la scrollbar sur chrome
+body::-webkit-scrollbar {
+    display: none;
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+}
+
+main > h2,
+main > h1 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+a:visited {
+    color: inherit;
+}
+
+html {
+    font-size: 16px;
+    font-family: $police-texte;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    flex: 1;
+}
+
+section {
+    padding: 2rem;
+}
+
+.card {
+    width: 70%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    transition-property: box-shadow;
+    transition-duration: 1s;
+}
+
+.card > img {
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+
+.card:hover {
+    box-shadow: 10px 5px 5px #0000002e;
+}
+
+.card > h2,
+.card > h3 {
+    color: white;
+}
+
+.card p {
+    color: white;
+    font-size: 12px;
+}
+.ctabtn {
+    background-color: $main-color;
+    color: $second-color;
+    border-radius: 25px;
+    display: block;
+    padding: 1rem;
+    transition-property: background-color, color, border-bottom;
+    transition-duration: 0.5s;
+}
+
+.ctabtn:hover {
+    background-color: $second-color;
+    color: $main-color;
+    border: 1px solid $main-color;
+}
+
+.ctabtnreverse {
+    background-color: $second-color;
+    border-radius: 25px;
+    display: block;
+    padding: 1rem;
+    transition-property: background-color, color, border-bottom;
+    transition-duration: 0.5s;
+}
+
+.ctabtnreverse:hover {
+    background-color: $main-color;
+    color: $second-color;
+    border: 1px solid $second-color;
+}
+
+aside {
+    width: 150px;
+    background-color: $main-color;
+    height: 100vh;
+    border-radius: 15px;
+    padding: 1rem;
+}
+
+fieldset {
+    border: 0;
+}
+.mentionslegales {
+    background-color: $second-color;
+    color: $main-color;
+    display: flex;
+    flex-direction: column;
+}
+.mentionslegales > h1 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mentionslegales > div {
+    border: 1px black solid;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+    video {
+        height: 92vh;
+        width: auto;
+    }
+}

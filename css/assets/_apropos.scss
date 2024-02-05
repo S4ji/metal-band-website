@@ -1,0 +1,160 @@
+@use 'variables' as *;
+
+video {
+    background-color: $main-color;
+}
+
+//SECTION A PROPOS
+
+.apropos {
+    display: flex;
+    padding: 0rem;
+    padding-left: 0.1rem;
+    max-height: 100vh;
+}
+
+.apropos > aside {
+    display: block;
+    color: $second-color;
+    margin-right: 1rem;
+    height: 50%;
+}
+
+//FRISE CHRONOLOGIQUE ASIDE
+
+dl {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+dt {
+    width: 50%;
+    font-weight: bold;
+    font-family: $police-titre;
+}
+
+dt::before {
+    margin-left: 1rem;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f7a6';
+}
+
+dd {
+    width: 50%;
+}
+
+.article {
+    border: 1px solid $main-color;
+    padding: 1rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+// TEMOIGNAGES
+
+.testimony .card {
+    background-color: initial;
+}
+
+.testimony .card:hover {
+    box-shadow: initial;
+}
+
+.testimony .card > img {
+    border-radius: 50%;
+    width: 150px;
+}
+
+.testimony .card p,
+.testimony .card h3 {
+    color: $main-color;
+}
+
+.testimony .card p {
+    font-family: $police-titre;
+    font-size: 3rem;
+}
+
+//CITATION
+
+cite {
+    color: $main-color;
+    display: flex;
+}
+
+cite::before,
+cite::after {
+    content: '"';
+    color: $second-color;
+    font-size: 2.5rem;
+    font-family: $police-titre;
+    margin-right: 1rem;
+}
+
+// EFFET IMPORTE POUR ARTICLES
+.main-article p:first-letter {
+    float: left;
+    color: rgb(255, 0, 0);
+    font-size: 4rem;
+    line-height: 2rem;
+    padding-top: 0.5rem;
+    padding-right: 0.8rem;
+    padding-left: 0.3rem;
+    font-weight: 100;
+}
+
+.main-article {
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-article h2 {
+    font-family: $police-titre;
+}
+
+.main-article div {
+    margin-left: 1rem;
+}
+
+//GRID GALLERIE
+
+// Tout l'effet de Hover de la gallerie dépend de ce code ensuite heigh, width:0 min-heigh, min-width:100%
+
+.gallerie {
+    background-color: $main-color;
+    display: grid;
+    gap: $gap-size;
+    width: 100%;
+    aspect-ratio: 1/1;
+    grid-template-columns: repeat(8, auto);
+    min-height: 80vh;
+    max-height: 80vh;
+}
+
+.gallerie > img {
+    width: 0;
+    height: 0;
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: all 0.8s ease-in-out;
+}
+
+.gallerie > img:hover {
+    width: calc($size-control * $scaling-factor);
+    height: calc($size-control * $scaling-factor);
+}
+
+@media only screen and (min-width: 768px) {
+    .main-article {
+        flex-direction: row;
+        align-items: center;
+    }
+}

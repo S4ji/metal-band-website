@@ -1,0 +1,43 @@
+.ancreproducts {
+    margin-bottom: 2rem;
+}
+
+.ancreproducts > div > div > a {
+    width: fit-content;
+    padding: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+}
+
+.ancreproducts img {
+    border-radius: 15px;
+}
+
+@media only screen and (min-width: 768px) {
+    .ancreproducts {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem;
+    }
+    .ancreproducts > div {
+        display: flex;
+    }
+
+    .ancreproducts > div > div:nth-child(2) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        margin-left: 1rem;
+    }
+
+    .ancreproducts > div > div > a {
+        width: fit-content;
+        padding: 1rem;
+        margin-left: 40%;
+        margin-top: 7%;
+    }
+}

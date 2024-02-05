@@ -1,0 +1,16 @@
+.slider {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background-image 0.2s ease-in-out;
+    height: 100vh;
+}
+.slider > div {
+    display: flex;
+    align-items: center;
+}
+.slide {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 1rem;
+}
